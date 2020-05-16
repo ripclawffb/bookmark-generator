@@ -39,5 +39,10 @@ Apart from that they are functionally equivalent
       - name: Youtube
         url: https://www.youtube.com
 
+## Usage
+```
+python bookmark_generator.py example.yml > example.html
+```
+
 ## Result
 ![Screenshot](doc/screenshot.png)
