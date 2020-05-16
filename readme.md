@@ -17,7 +17,7 @@ Apart from that they are functionally equivalent
 ## Example input yaml:
 
     ---
-    - folder: test bookmarks
+    - folder: Test Bookmarks
       bookmarks:
       - name: Google
         url: https://www.google.com
@@ -33,6 +33,8 @@ Apart from that they are functionally equivalent
           tags:
           - country
           - asia
+        # a separator
+        - name: ---
         - name: Nepal
           url: https://en.wikipedia.org/wiki/Nepal
           description: A country in the Himalayas
