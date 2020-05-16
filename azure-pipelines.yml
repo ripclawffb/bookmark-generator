@@ -25,6 +25,6 @@ steps:
   displayName: 'Install dependencies'
 
 - script: |
-    python bookmark_generator.py example.yml
+    python bookmark_generator.py example.yml > example.html
     cat example.html
   displayName: 'Generate bookmark file'
