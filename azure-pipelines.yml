@@ -29,4 +29,7 @@ steps:
     python bookmark_generator.py example.yml > example.html
     cat example.html
     npx semantic-release -d
+  env:
+    GH_TOKEN: $(GH_TOKEN)
   displayName: 'Generate bookmark file'
+
