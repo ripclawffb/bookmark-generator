@@ -3,9 +3,6 @@
 # Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
 
-trigger:
-- master
-
 pool:
   vmImage: 'ubuntu-latest'
 strategy:
@@ -21,7 +18,7 @@ steps:
 
 - task: AzureKeyVault@1
   inputs:
-    azureSubscription: 2ec2d604-c9f3-4278-b70d-ff714006a083
+    azureSubscription: default-azure-pipeline
     keyVaultName: asifkeyvault 
     secretsFilter: 'bookmark-generator-gh-token'
   displayName: 'Get secrets'
