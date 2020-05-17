@@ -19,6 +19,13 @@ steps:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
 
+- task: AzureKeyVault@1
+  inputs:
+    azureSubscription: 2ec2d604-c9f3-4278-b70d-ff714006a083
+    keyVaultName: asifkeyvault 
+    secretsFilter: 'bookmark-generator-gh-token'
+  displayName: 'Get secrets'
+
 - script: |
     python -m pip install --upgrade pip
     pip install pyyaml
@@ -30,6 +37,6 @@ steps:
     cat example.html
     npx semantic-release
   env:
-    GH_TOKEN: $(GH_TOKEN)
+    GH_TOKEN: $(bookmark-generator-gh-token)
   displayName: 'Generate bookmark file'
 
